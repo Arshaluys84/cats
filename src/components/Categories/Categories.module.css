@@ -1,0 +1,9 @@
+.ul {
+  margin: 0.5rem;
+  text-decoration: none;
+}
+.info {
+  background-color: rgb(118, 206, 118);
+  width: 300px;
+  margin: 0 auto;
+}

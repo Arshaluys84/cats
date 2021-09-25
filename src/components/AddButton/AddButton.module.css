@@ -1,0 +1,8 @@
+.addMore button {
+  margin: 1rem;
+  border-radius: 10%;
+  cursor: pointer;
+}
+.addMore button:hover {
+  border: 2px solid #ccc;
+}
