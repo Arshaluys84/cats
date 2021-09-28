@@ -5,7 +5,7 @@ const initialState = {
 };
 const catsReducer = (state = initialState, action) => {
   if (action.type === "LOAD") {
-    return (state = { ...state, limit: state.limit + 10 });
+    return ( { ...state, limit: state.limit + 10 });
   }
   return state;
 };
