@@ -1,9 +1,18 @@
+.info {
+  background-color: rgb(203 100 100);
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+  border: 1px solid grey;
+  text-align: center;
+}
+
 .ul {
   margin: 0.5rem;
   text-decoration: none;
+  font-size: xx-large;
 }
-.info {
-  background-color: rgb(118, 206, 118);
-  width: 300px;
-  margin: 0 auto;
+
+.ul:hover{
+  color:red
 }

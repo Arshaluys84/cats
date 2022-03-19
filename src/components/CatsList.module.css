@@ -1,0 +1,8 @@
+/* .catsList{
+  display: flex;
+} */
+.images img{
+  display:inline-block;
+  width: 250px;
+  height: 200px;
+}

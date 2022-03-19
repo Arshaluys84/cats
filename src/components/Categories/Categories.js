@@ -3,21 +3,26 @@ import { fetchCategory } from "../../helpers/config";
 import { NavLink } from "react-router-dom";
 import s from "./Categories.module.css";
 
-const Categories = ({ addCategory }) => {
+export const Categories = ({ addCategory }) => {
   const [category, setCategory] = useState([]);
   const [currentCategory, setCurrentCategory] = useState(5);
+
   useEffect(() => {
     fetchCategory(setCategory);
-  }, [setCategory]);
+  }, []);
+
   return (
     <div>
       <div className={s.info}>
-        THERE ARE SOME CATEGORIES OF IMAGES,
-        <br />
-        PLEASE , CHOOSE ONE OF THEM.
+        <p>
+          THERE ARE SOME CATEGORIES OF IMAGES,
+
+          PLEASE , CHOOSE ONE OF THEM.
+        </p>
       </div>
+
       <div>
-        {category.map((c, id) => (
+        {category.map((item, id) => (
           <NavLink
             to="/"
             key={id}
@@ -27,7 +32,7 @@ const Categories = ({ addCategory }) => {
               addCategory(currentCategory);
             }}
           >
-            {c}
+            {item}
           </NavLink>
         ))}
       </div>
@@ -35,4 +40,3 @@ const Categories = ({ addCategory }) => {
   );
 };
 
-export default Categories;

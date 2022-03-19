@@ -1,11 +1,11 @@
-import Categories from "./components/Categories/Categories";
-import { FetchBox } from "./components/FetchBox";
 import { useState, useEffect } from "react";
-import AddButton from "./components/AddButton/AddButton";
+import { Categories } from "./components/Categories/Categories";
+import { FetchBox } from "./components/FetchBox";
+import { AddButton } from "./components/AddButton/AddButton";
 import { useSelector, useDispatch } from "react-redux";
-import "./App.css";
 import { Route, Switch } from "react-router";
-import Header from "./Header/Header";
+import { Header } from "./Header/Header";
+import "./App.css";
 
 function App() {
   const [catValue, setCatValue] = useState("");
@@ -27,13 +27,12 @@ function App() {
       <Header />
       <Switch>
         <Route
-          path="/categories"
-          component={() => <Categories addCategory={addCategory} />}
-        />
+          path="/categories">
+          <Categories addCategory={addCategory} />
+          <FetchBox catValue={catValue} limit={10} />
+        </Route>
         <Route
-          path="/"
-          exact
-          // component={() => }
+          path="/" exact
         >
           <FetchBox catValue={catValue} limit={limit} />
           <AddButton addMore={addMore} />

@@ -1,0 +1,8 @@
+ .catsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    
+} 

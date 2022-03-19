@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./AddButton.module.css";
 
-const AddButton = ({ addMore }) => {
+export const AddButton = ({ addMore }) => {
   return (
     <div className={s.addMore}>
       <button onClick={addMore}>More Cats</button>
@@ -9,4 +9,3 @@ const AddButton = ({ addMore }) => {
   );
 };
 
-export default AddButton;
